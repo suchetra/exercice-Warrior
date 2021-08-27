@@ -36,9 +36,17 @@ abstract class Warrior extends LocalWarrior {
     }
 
     // 11/ La classe Warrior doit avoir une méthode setWeapon() qui prend comme argument un Weapon. ATTENTION, c'est un setter
+    // https://www.tutorialspoint.com/what-are-getters-and-setters-methods-in-php
     // https://www.php.net/manual/fr/language.types.declarations.php
     public function setWeapon(Weapon $weapon) {
         $this->weapon = $weapon;
+    }
+
+    // 14/ Warrior et Weapon doivent avoir une méthode setImageUrl($url) qui initialise l'attribut $imageUrl
+    public function setImageUrl($imageUrl){
+
+        $this->imageUrl = $imageUrl;
+
     }
 
 };
@@ -104,5 +112,21 @@ class PokemonWarrior extends Warrior {
 
 // 10/ Une classe Weapon doit être créée
 class Weapon {
+    // 12/ Weapon doit avoir les attributs (publics) $id, $strength et $imageUrl
+    public $id;
+    public $strength;
+    public $imageUrl;
+
     
+    // 13/ Weapon doit avoir un constructeur à 2 arguments $id et $strength qui initialise les attributs associés
+    public function __construct($id, $strength){
+        $this->id = $id;
+        $this->strength = $strength;
+    }
+
+    public function setImageUrl($imageUrl){
+
+        $this->imageUrl = $imageUrl;
+
+    }
 }
