@@ -18,7 +18,6 @@ abstract class Warrior extends LocalWarrior {
     public $shield;
     public $imageUrl;
     public $weapon;
-
     
     // 7/ Les classes Warrior, StartrekWarrior, MarvelWarrior et PokemonWarrior doivent avoir des constructeurs
     public function __construct($id){
@@ -34,6 +33,12 @@ abstract class Warrior extends LocalWarrior {
         // $speed = 30;
         // $life = 100;
         // $shield = 20;
+    }
+
+    // 11/ La classe Warrior doit avoir une méthode setWeapon() qui prend comme argument un Weapon. ATTENTION, c'est un setter
+    // https://www.php.net/manual/fr/language.types.declarations.php
+    public function setWeapon(Weapon $weapon) {
+        $this->weapon = $weapon;
     }
 
 };
@@ -52,6 +57,7 @@ class StartrekWarrior extends Warrior {
 
     // 7/ Les classes Warrior, StartrekWarrior, MarvelWarrior et PokemonWarrior doivent avoir des constructeurs
     public function __construct($id){
+        // 9/ Les constructeurs des sous classes de warrior doivent appeler le constructeur de Warrior et affecter $mentalPower = 8, $superPower = 100, $level = 1
         parent:: __construct($id);
         $this->mentalPower = 8;
     }
@@ -93,4 +99,10 @@ class PokemonWarrior extends Warrior {
         $this->level = 1;
     }
 
+}
+
+
+// 10/ Une classe Weapon doit être créée
+class Weapon {
+    
 }
