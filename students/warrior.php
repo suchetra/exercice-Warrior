@@ -51,9 +51,8 @@ class StartrekWarrior extends Warrior {
     }
 
     // 7/ Les classes Warrior, StartrekWarrior, MarvelWarrior et PokemonWarrior doivent avoir des constructeurs
-    public function __construct($mentalPower){
-        parent:: __construct($mentalPower){
-        }
+    public function __construct($id){
+        parent:: __construct($id);
         $this->mentalPower = 8;
     }
 
@@ -70,10 +69,9 @@ class MarvelWarrior extends Warrior {
     }
 
     // 7/ Les classes Warrior, StartrekWarrior, MarvelWarrior et PokemonWarrior doivent avoir des constructeurs
-    public function __construct(){
-        // parent:: __construct(){
-        //     $this->superPower = 100;
-        // }
+    public function __construct($id){
+        parent:: __construct($id);
+        $this->superPower = 100;
     }
 
 }
@@ -90,10 +88,9 @@ class PokemonWarrior extends Warrior {
     }
 
     // 7/ Les classes Warrior, StartrekWarrior, MarvelWarrior et PokemonWarrior doivent avoir des constructeurs
-    public function __construct(){
-        // parent:: __construct(){
-        //     $this->level = 1;
-        // }
+    public function __construct($id){
+        parent:: __construct($id);
+        $this->level = 1;
     }
 
 }
